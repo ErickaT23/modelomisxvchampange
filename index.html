@@ -34,7 +34,8 @@
     <div id="portada-envelope-trigger" class="portada-contenido" role="presentation">
       <div class="portada-center">
         <h1 class="portada-main-name portada-nombre">
-          <span>Anika Fernanda</span>
+          <span>Anika</span>
+          <span>Fernanda</span>
         </h1>
         <button id="btn-abrir" type="button">Abrir invitación</button>
       </div>
@@ -56,6 +57,7 @@
           <li><a href="#regalos">Regalos</a></li>
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#fotos">Sube fotos</a></li>
+          <li><a href="#deseos">Buenos deseos</a></li>
         </ul>
       </nav>
     </aside>
@@ -177,7 +179,7 @@
             <img class="dress-icon" src="images/Iconos/groom.svg" alt="">
           </div>
           <p class="dress-copy">Formal y elegante; nos hemos reservado el color champán, no olvides abrigarte bien.</p>
-          <h4 class="dress-subtitle">Inspiracion</h4>
+          <h4 class="dress-subtitle">Inspiración</h4>
           <a class="btn-soft" href="https://es.pinterest.com/search/pins/?q=Outfits%20para%20invitadas%20e%20invitados%20para%20fiesta&rs=typed" target="_blank" rel="noopener">Ir a Pinterest</a>
         </div>
       </section>
@@ -197,9 +199,32 @@
       <section id="fotos" class="section fotos fade-in-element">
         <div class="fotos-card">
           <h3 class="fotos-title">¡Hagamos los recuerdos realidad!</h3>
-          <img class="fotos-qr" src="images/QR-ZOE.svg" alt="QR para subir fotos y videos">
+          <img class="fotos-qr" src="images/QRXV.svg" alt="QR para subir fotos y videos">
           <p class="fotos-copy">Ayúdanos a inmortalizar este día tan especial, compartiendo con nosotros las fotos y videos que captures. Puedes hacerlo escaneando el QR o subiéndolas en el botón.</p>
           <a class="btn-soft" href="https://drive.google.com/drive/folders/1dWgSgV3frl_pkQDEcomF9RL3Ts51d8Bb?usp=drive_link" target="_blank" rel="noopener">Subir Fotos</a>
+        </div>
+      </section>
+
+      <section id="deseos" class="section deseos fade-in-element">
+        <div class="regalos-card deseos-card">
+          <h3 class="regalos-title">Buenos deseos</h3>
+          <p class="regalos-copy">Déjanos un mensaje especial para recordar este día contigo.</p>
+
+          <div class="deseos-actions">
+            <button class="btn-soft" type="button" onclick="toggleWishForm()">Dejar mi deseo</button>
+            <button class="btn-soft" type="button" onclick="toggleWishes()">Ver mensajes</button>
+          </div>
+
+          <div id="wish-form-panel" class="deseos-form-panel hidden" aria-label="Formulario de buenos deseos">
+            <form id="wish-form" class="deseos-form" onsubmit="return submitWish(event)">
+              <input id="wish-name" type="text" maxlength="60" placeholder="Tu nombre" required>
+              <textarea id="wish-message" rows="4" maxlength="280" placeholder="Escribe tu deseo" required></textarea>
+              <button class="btn-soft" type="submit">Enviar deseo</button>
+            </form>
+          </div>
+
+          <p id="wish-status" class="deseos-status" aria-live="polite"></p>
+          <div id="wishes" class="deseos-list" aria-live="polite"></div>
         </div>
       </section>
 
@@ -231,7 +256,7 @@
     </footer>
   </div>
 
-  <button id="music-fab" class="music-fab" type="button" aria-label="Pausar musica" hidden>
+  <button id="music-fab" class="music-fab" type="button" aria-label="Pausar música" hidden>
     <span class="music-fab-icon" aria-hidden="true">♪</span>
   </button>
   <audio id="bg-music" preload="auto" loop>

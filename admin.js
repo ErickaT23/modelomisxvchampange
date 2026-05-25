@@ -20,13 +20,6 @@
     ).trim() || "admin";
     const BASE_URL = window.location.origin;
     const INCLUDE_INACTIVE_IN_BULK_COPY = false;
-    const SPECIAL_GROUP_GUEST = {
-        id: "3B",
-        nombre: "Compañeros y Compañeras de 3ro. Básico",
-        pases: 20,
-        activo: true
-    };
-
     const state = {
         eventId: "",
         db: null,
@@ -89,7 +82,7 @@
             window.config
             && window.config.event
             && window.config.event.defaultEventId
-            || "misxv-ana-maria-2026"
+            || "misxv-anika-fernanda-2026"
         ).trim();
 
         return queryEventId || defaultEventId;
@@ -1409,26 +1402,6 @@
         }
     }
 
-    async function ensureSpecialGroupInvite(db) {
-        if (!db || typeof db.getInvitados !== "function" || typeof db.createInvitado !== "function") {
-            return;
-        }
-
-        try {
-            const invitados = await db.getInvitados(state.eventId);
-            const exists = (Array.isArray(invitados) ? invitados : []).some(function (item) {
-                const id = String(item && (item.id || item._key) || "").trim();
-                return id === SPECIAL_GROUP_GUEST.id;
-            });
-
-            if (exists) return;
-            await db.createInvitado(state.eventId, SPECIAL_GROUP_GUEST);
-            setStatus("Invitación 3B creada automáticamente.", false);
-        } catch (error) {
-            console.error("No se pudo crear invitación 3B:", error);
-        }
-    }
-
     async function init() {
         const query = getQueryParams();
         if (!isValidAdminKey(query.adminKey)) {
@@ -1456,7 +1429,6 @@
             }
 
             state.db = db;
-            await ensureSpecialGroupInvite(db);
             subscribeData(db);
         } catch (error) {
             console.error(error);

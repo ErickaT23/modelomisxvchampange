@@ -22,7 +22,7 @@ const externalConfig = window.config || {};
 function resolveEventId() {
     const eventConfig = externalConfig.event || {};
     const eventIdParam = String(eventConfig.eventIdParam || 'eventId').trim() || 'eventId';
-    const defaultEventId = String(eventConfig.defaultEventId || 'misxv-zoe-daniela-2026').trim() || 'misxv-zoe-daniela-2026';
+    const defaultEventId = String(eventConfig.defaultEventId || 'misxv-anika-fernanda-2026').trim() || 'misxv-anika-fernanda-2026';
     const params = new URLSearchParams(window.location.search || '');
     const paramValue = String(params.get(eventIdParam) || '').trim();
     const eventId = paramValue || defaultEventId;
@@ -88,7 +88,7 @@ function createSiteConfig(remoteConfig) {
             ...normalizedRemoteConfig.pareja
         },
         musica: {
-            titulo: 'Nuestra Cancion',
+            titulo: 'Nuestra Canción',
             archivo: 'audio/nuestra-cancion.mp3',
             ...externalConfig.musica,
             ...normalizedRemoteConfig.musica
@@ -114,7 +114,7 @@ function createSiteConfig(remoteConfig) {
             }
         },
         textos: {
-            mensajeInvitado: 'Tu presencia es nuestra mayor bendicion. Hemos reservado para ustedes:',
+            mensajeInvitado: 'Tu presencia es nuestra mayor bendición. Hemos reservado para ustedes:',
             mensajePases: '{pases} lugares',
             ...externalConfig.textos,
             ...normalizedRemoteConfig.textos
@@ -123,7 +123,7 @@ function createSiteConfig(remoteConfig) {
             hashtag: '#MisXVAnikaFernanda',
             instagramUrl: 'https://instagram.com/rocio.fernando.boda',
             facebookUrl: 'https://facebook.com/rociofernandoboda',
-            marcaTexto: 'Diseno',
+            marcaTexto: 'Diseño',
             marcaNombre: 'Two Design',
             marcaUrl: 'https://twodesign.com',
             ...externalConfig.footer,
@@ -250,121 +250,11 @@ function applyFooterConfig() {
 // ============================================
 const GuestConfig = {
     invitados: {
-        "1": { nombre: "Sra. Carmen De León", pases: 1 },
-        "2": { nombre: "Sr. Jorge Rodríguez y familia.", pases: 5 },
-        "3": { nombre: "Sr. Francisco Rodríguez y familia.", pases: 3 },
-        "4": { nombre: "Sra. Eugenia Estacuy y familia.", pases: 2 },
-        "5": { nombre: "Sr. Gustavo Estacuy y familia.", pases: 4 },
-        "6": { nombre: "Sr. Juan Ramón Alvarado y familia.", pases: 2 },
-        "7": { nombre: "Sr. Rodolfo Robles y familia.", pases: 4 },
-        "8": { nombre: "Sr. Mario Roberto Fernández y familia.", pases: 5 },
-        "9": { nombre: "Sra. Carmen María Alvarado y familia.", pases: 5 },
-        "10": { nombre: "Sr. Juan Carlos Alvarado y familia.", pases: 5 },
-        "11": { nombre: "Sr. Carlos De León y familia.", pases: 2 },
-        "12": { nombre: "Sr. Carlos Enrique de León y familia.", pases: 2 },
-        "13": { nombre: "Sra, Anaydee de León y familia.", pases: 4 },
-        "14": { nombre: "Sr. Luis Enrique de León y familia.", pases: 2 },
-        "15": { nombre: "Sr. Frank Mancilla y familia.", pases: 4 },
-        "16": { nombre: "Sr. Ivan Florian y familia.", pases: 2 },
-        "17": { nombre: "Sr. Otto Rodríguez", pases: 1 },
-        "18": { nombre: "Sra. Mareli Rodríguez y familia.", pases: 2 },
-        "19": { nombre: "Sra. Maria del Carmen Rodríguez y familia.", pases: 3 },
-        "20": { nombre: "Sr. Victor Manuel Say y familia.", pases: 3 },
-        "21": { nombre: "Sra. Judith Rodríguez", pases: 1 },
-        "22": { nombre: "Sr, Raúl Calito y familia.", pases: 3 },
-        "23": { nombre: "Sr. Darío Díaz y familia.", pases: 5 },
-        "24": { nombre: "Sr. Nestor Rodas y familia.", pases: 4 },
-        "25": { nombre: "Sr. Enrique Vidal y familia.", pases: 2 },
-        "26": { nombre: "Srita. Maritza González", pases: 1 },
-        "27": { nombre: "Familia Ochoa de León", pases: 2 },
-        "28": { nombre: "Paola Ochoa e Hijo", pases: 2 },
-        "29": { nombre: "Familia Alvarado Ovalle", pases: 3 },
-        "30": { nombre: "Familia Dominguez Morales", pases: 4 },
-        "31": { nombre: "Familia Diaz Castillo", pases: 4 },
-        "32": { nombre: "Familia Dominguez Rivera", pases: 2 },
-        "33": { nombre: "Hector Bachez Ochoa", pases: 2 },
-        "34": { nombre: "Licda. Magda Salazar", pases: 1 },
-        "35": { nombre: "Familia Obregón Salazar", pases: 2 },
-        "36": { nombre: "Carmen Natareno e Hijo", pases: 2 },
-        "37": { nombre: "Roberto Leal y Familia", pases: 3 },
-        "38": { nombre: "Familia Leal Sarmiento", pases: 4 },
-        "39": { nombre: "Sra. Maribel de León", pases: 1 },
-        "40": { nombre: "Sra. Angelica de León", pases: 1 },
-        "41": { nombre: "Evelyn Ochoa", pases: 1 },
-        "42": { nombre: "Eduardo Ochoa y Familia", pases: 4 },
-        "43": { nombre: "Diogenes Ochoa y Familia", pases: 4 },
-        "44": { nombre: "Jorge Roberto Ochoa y Familia", pases: 4 },
-        "45": { nombre: "Familia Gonzalez Lorenzana", pases: 4 },
-        "46": { nombre: "Licda. Ada Ojer y Familia", pases: 4 },
-        "47": { nombre: "Familia Santizo", pases: 4 },
-        "48": { nombre: "Familia Rodriguez Ochoa", pases: 5 },
-        "49": { nombre: "Cristian Castillo y Familia", pases: 2 },
-        "50": { nombre: "Karolselen Castillo y Familia", pases: 4 },
-        "51": { nombre: "Sra. Debora Ochoa", pases: 1 },
-        "52": { nombre: "Veronica Lobos y Familia", pases: 5 },
-        "53": { nombre: "Familia Barrios Argueta", pases: 4 },
-        "54": { nombre: "Veronica Sarai", pases: 1 },
-        "55": { nombre: "Alejandro Garcia", pases: 1 },
-        "56": { nombre: "Gizzel Chacon", pases: 1 },
-        "57": { nombre: "Rafael Velazquez", pases: 1 },
-        "58": { nombre: "Roberto Barillas", pases: 1 },
-        "59": { nombre: "Ethan Rojas", pases: 1 },
-        "60": { nombre: "David Mazariegos", pases: 1 },
-        "61": { nombre: "Josue Samayoa", pases: 1 },
-        "62": { nombre: "Rodrigo Domínguez", pases: 1 },
-        "63": { nombre: "Danilo Gramajo", pases: 2 },
-        "64": { nombre: "Sebastian Blanco", pases: 1 },
-        "65": { nombre: "Isaias Santizo", pases: 1 },
-        "66": { nombre: "Cesar Calderon", pases: 1 },
-        "67": { nombre: "Fernando Rivera", pases: 1 },
-        "68": { nombre: "Regina Borrayo", pases: 1 },
-        "69": { nombre: "Natalia Albisurez", pases: 1 },
-        "70": { nombre: "Sebastian Fernandez", pases: 1 },
-        "71": { nombre: "Jose Polanco", pases: 1 },
-        "72": { nombre: "Victor Robles", pases: 1 },
-        "73": { nombre: "Magnolia Calderon", pases: 1 },
-        "74": { nombre: "Maria Quan", pases: 1 },
-        "75": { nombre: "Tiffanie Lam", pases: 1 },
-        "76": { nombre: "Dulce Calderon", pases: 1 },
-        "77": { nombre: "Carmen Noriega", pases: 1 },
-        "78": { nombre: "Hermanos Alvarado", pases: 2 },
-        "79": { nombre: "Samanta Fernandez", pases: 1 },
-        "80": { nombre: "Dana Garcia", pases: 1 },
-        "81": { nombre: "Joser Barrios", pases: 1 },
-        "82": { nombre: "Andres Quintero", pases: 1 },
-        "83": { nombre: "Fernanda Davila", pases: 1 },
-        "84": { nombre: "Ronald Tzul", pases: 1 },
-        "85": { nombre: "Sebastian Estacuy", pases: 1 },
-        "86": { nombre: "Emiliano Dominguez", pases: 1 },
-        "87": { nombre: "Yordi Hervias", pases: 1 },
-        "88": { nombre: "Diana Rendon", pases: 1 },
-        "89": { nombre: "Zoe", pases: 1 },
-        "90": { nombre: "Arturo Reyna", pases: 3 },
-        "91": { nombre: "Santiago Hernandez", pases: 1 },
-        "92": { nombre: "Mariandre Pisqui", pases: 1 },
-        "93": { nombre: "Sofia Rueda", pases: 2 },
-        "94": { nombre: "Dylan Dareth", pases: 1 },
-        "95": { nombre: "Sergio Marroquin", pases: 1 },
-        "96": { nombre: "Adrian Avalos", pases: 1 },
-        "97": { nombre: "Ariany", pases: 1 },
-        "98": { nombre: "Valeria de León", pases: 1 },
-        "99": { nombre: "Familia del Valle Rodas", pases: 3 },
-        "100": { nombre: "Alessandro Loarca", pases: 1 },
-        "101": { nombre: "Sofia de Leon", pases: 1 },
-        "102": { nombre: "Natalia de leon", pases: 1 },
-        "103": { nombre: "Luciano Monterroso", pases: 1 },
-        "104": { nombre: "Jonathan Jeshke", pases: 1 },
-        "105": { nombre: "Emil Vondemart", pases: 1 },
-        "106": { nombre: "Fernando Hernandez", pases: 1 },
-        "107": { nombre: "Martin Galindo", pases: 2 },
-        "108": { nombre: "Lindsay Veliz", pases: 1 },
-        "109": { nombre: "Javier Escalante", pases: 1 },
-        "110": { nombre: "Adriana Uribe", pases: 1 },
-        "111": { nombre: "Allyson Minnely", pases: 1 },
-        "112": { nombre: "Camila", pases: 1 },
-        "113": { nombre: "Melany Vasquez", pases: 1 },
-        "114": { nombre: "Carlos Tucux", pases: 1 },
-        "3B": { nombre: "Compañeros y Compañeras de 3ro. Básico", pases: 20 }
+        "1": { nombre: "Valeria Soto", pases: 2 },
+        "2": { nombre: "Diego Marín", pases: 4 },
+        "3": { nombre: "Camila Rivas", pases: 3 },
+        "4": { nombre: "Javier Ponce", pases: 1 },
+        "5": { nombre: "Lucía Herrera", pases: 2 }
     },
     invitadoDefault: { nombre: "Invitado Especial", pases: 2 },
     paramId: 'id'
@@ -596,7 +486,7 @@ const MusicBubble = {
         } catch (error) {
             this.isPlaying = false;
             this.syncVisualState(false);
-            console.warn('No se pudo iniciar la musica automaticamente:', error);
+            console.warn('No se pudo iniciar la música automáticamente:', error);
         }
     },
 
@@ -625,14 +515,14 @@ const MusicBubble = {
         } catch (error) {
             this.isPlaying = false;
             this.syncVisualState(false);
-            console.warn('No se pudo reanudar la musica:', error);
+            console.warn('No se pudo reanudar la música:', error);
         }
     },
 
     syncVisualState(playing) {
         if (!this.button) return;
         this.button.classList.toggle('is-playing', playing);
-        this.button.setAttribute('aria-label', playing ? 'Pausar musica' : 'Reproducir musica');
+        this.button.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
         if (this.icon) this.icon.textContent = playing ? '♫' : '♪';
     }
 };

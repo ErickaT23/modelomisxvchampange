@@ -1,16 +1,15 @@
 import { subscribeToConfirmations, subscribeToInvitados } from "./database.js";
 
 const guestDirectorySeed = {
-    "1": { nombre: "María López", pases: 2 },
-    "2": { nombre: "Carlos Méndez", pases: 4 },
-    "3": { nombre: "Andrea Ruiz", pases: 1 },
-    "4": { nombre: "Familia García", pases: 6 },
-    "5": { nombre: "Pedro Sánchez", pases: 2 },
-    "3B": { nombre: "Compañeros y Compañeras de 3ro. Básico", pases: 20 }
+    "1": { nombre: "Valeria Soto", pases: 2 },
+    "2": { nombre: "Diego Marín", pases: 4 },
+    "3": { nombre: "Camila Rivas", pases: 3 },
+    "4": { nombre: "Javier Ponce", pases: 1 },
+    "5": { nombre: "Lucía Herrera", pases: 2 }
 };
 
 const guestDirectoriesByEvent = {
-    "misxv-zoe-daniela-2026": guestDirectorySeed
+    "misxv-anika-fernanda-2026": guestDirectorySeed
 };
 
 window.LocalGuestSeeds = {
@@ -24,7 +23,7 @@ function resolveDashboardEventContext() {
     const externalConfig = window.config || {};
     const eventConfig = externalConfig.event || {};
     const eventIdParam = String(eventConfig.eventIdParam || "eventId").trim() || "eventId";
-    const defaultEventId = String(eventConfig.defaultEventId || "misxv-zoe-daniela-2026").trim() || "misxv-zoe-daniela-2026";
+    const defaultEventId = String(eventConfig.defaultEventId || "misxv-anika-fernanda-2026").trim() || "misxv-anika-fernanda-2026";
     const params = new URLSearchParams(window.location.search || "");
     const fromQuery = String(params.get(eventIdParam) || "").trim();
     const fromWindow = String(

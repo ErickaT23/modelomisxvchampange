@@ -1,6 +1,6 @@
 const config = {
     event: {
-        defaultEventId: "misxv-zoe-daniela-2026",
+        defaultEventId: "misxv-anika-fernanda-2026",
         eventIdParam: "eventId",
         legacyFallback: {
             read: false,
@@ -58,7 +58,7 @@ const config = {
         hashtag: "#MisXVAnikaFernanda",
         instagramUrl: "https://instagram.com/rocio.fernando.boda",
         facebookUrl: "https://facebook.com/rociofernandoboda",
-        marcaTexto: "Diseno",
+        marcaTexto: "Diseño",
         marcaNombre: "Two Design",
         marcaUrl: "https://twodesign.com"
     }

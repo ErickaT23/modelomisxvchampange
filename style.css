@@ -1284,7 +1284,8 @@ p {
 }
 
 #dresscode .btn-soft,
-#fotos .btn-soft {
+#fotos .btn-soft,
+#deseos .btn-soft {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1387,6 +1388,105 @@ p {
 .fotos-copy {
   max-width: 700px;
   margin: 0 auto;
+}
+
+#deseos {
+  width: 100%;
+  max-width: none;
+  margin-top: 0 !important;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: url("images/F2.png") center / cover no-repeat;
+  text-align: center;
+}
+
+.deseos-card {
+  margin-top: 20px;
+  background: linear-gradient(160deg, rgba(247, 238, 228, 0.62) 0%, rgba(239, 224, 208, 0.58) 48%, rgba(230, 210, 189, 0.54) 100%);
+  box-shadow: 0 0 0 1px rgba(255, 242, 203, 0.35), 0 0 14px rgba(217, 181, 106, 0.28), inset 0 0 12px rgba(255, 238, 188, 0.16);
+}
+
+.deseos-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 240px));
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1rem auto 0;
+}
+
+.deseos-form-panel {
+  margin-top: 1rem;
+}
+
+.deseos-form {
+  width: min(620px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.deseos-form input,
+.deseos-form textarea {
+  width: 100%;
+  border: 1px solid #d8bd8b;
+  border-radius: 14px;
+  padding: 0.72rem 0.9rem;
+  background: rgba(255, 250, 244, 0.9);
+  color: #6a4b2d;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+}
+
+.deseos-form textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.deseos-status {
+  min-height: 1.1rem;
+  margin: 0.75rem 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: #9e6d8d;
+}
+
+.deseos-list {
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.wish-card {
+  text-align: left;
+  border: 1px solid rgba(214, 179, 107, 0.7);
+  border-radius: 14px;
+  background: rgba(255, 249, 239, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(255, 240, 198, 0.65);
+  padding: 0.8rem 0.9rem;
+}
+
+.wish-card-name {
+  font-size: 1.2rem;
+  color: #8e6228;
+}
+
+.wish-card-message {
+  margin-top: 0.2rem;
+  color: #7d5f46;
+}
+
+.wish-card-date {
+  margin-top: 0.3rem;
+  color: #9e6d8d;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.wishes-empty {
+  color: #9e6d8d;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
 }
 
 #separador-v2 {
@@ -1707,6 +1807,10 @@ p {
   display: none !important;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .section,
 .footer,
 .fade-in-element,
@@ -1791,6 +1895,10 @@ p {
     object-fit: cover;
     object-position: center;
   }
+
+  .deseos-actions {
+    grid-template-columns: 1fr;
+  }
 }
 
 body.portada-lock {
@@ -1851,9 +1959,9 @@ body:not(.portada-lock) {
 
 .portada-main-name {
   font-family: "Great Vibes", "Cormorant Garamond", serif;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 0.9;
+  line-height: 1.02;
   text-align: center;
   background: linear-gradient(140deg, #f7e6c4 0%, #d9b56a 30%, #e8cfc4 62%, #b8925b 100%);
   -webkit-background-clip: text;
@@ -1934,6 +2042,10 @@ body:not(.portada-lock) {
 
 .portada-nombre span {
   display: block;
+}
+
+.portada-nombre span + span {
+  margin-top: 0.08em;
 }
 
 #portada #btn-abrir {
